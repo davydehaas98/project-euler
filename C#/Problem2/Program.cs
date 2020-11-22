@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Problem2
 {
@@ -7,7 +8,6 @@ namespace Problem2
     {
         private static void Main()
         {
-            var sum = 0;
             var fibonacciNumbers = new List<int>
             {
                 1,
@@ -23,11 +23,7 @@ namespace Problem2
                 fibonacciNumbers.Add(number);
             }
 
-            for (var i = 0; i < fibonacciNumbers.Count; i++)
-            {
-                if (fibonacciNumbers[i] % 2 == 0)
-                    sum += fibonacciNumbers[i];
-            }
+            var sum = fibonacciNumbers.Where(t => t % 2 == 0).Sum();
 
             Console.WriteLine("The sum of the even Fibonacci numbers not exceeding 4 million is: " + sum);
         }
