@@ -3,15 +3,16 @@ using System.Collections.Generic;
 
 namespace Problem2
 {
-    class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
             var sum = 0;
-            var fibonacciNumbers = new List<int>();
-
-            fibonacciNumbers.Add(1);
-            fibonacciNumbers.Add(2);
+            var fibonacciNumbers = new List<int>
+            {
+                1,
+                2
+            };
 
             for (var i = 2; i < 1000; i++)
             {
@@ -28,7 +29,7 @@ namespace Problem2
                     sum += fibonacciNumbers[i];
             }
 
-            Console.WriteLine("The sum of the even Fibonacci numbe    rs not exceeding 4 million is: " + sum);
+            Console.WriteLine("The sum of the even Fibonacci numbers not exceeding 4 million is: " + sum);
         }
     }
 }
