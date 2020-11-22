@@ -9,7 +9,6 @@ namespace Problem2
         {
             var sum = 0;
             var fibonacciNumbers = new List<int>();
-            var evenFibonacciNumbers = new List<int>();
 
             fibonacciNumbers.Add(1);
             fibonacciNumbers.Add(2);
@@ -17,9 +16,9 @@ namespace Problem2
             for (var i = 2; i < 1000; i++)
             {
                 var number = fibonacciNumbers[i - 2] + fibonacciNumbers[i - 1];
-                
+
                 if (number > 4000000) break;
-                
+
                 fibonacciNumbers.Add(number);
             }
 
@@ -28,7 +27,7 @@ namespace Problem2
                 if (fibonacciNumbers[i] % 2 == 0)
                     sum += fibonacciNumbers[i];
             }
-            
+
             Console.WriteLine("The sum of the even Fibonacci numbe    rs not exceeding 4 million is: " + sum);
         }
     }
