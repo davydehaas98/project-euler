@@ -13,7 +13,7 @@ namespace Problem3
                 if (prime % i == 0)
                     prime /= i;
 
-            Console.WriteLine("The largest prime factor of the number " + number + " is: " + prime);
+            Console.WriteLine("The largest prime factor of {0} is: {1}", number, prime);
         }
     }
 }

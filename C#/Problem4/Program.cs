@@ -19,8 +19,7 @@ namespace Problem4
             }
 
             Console.WriteLine(
-                "The largest palindrome made from the product of two 3-digit numbers is: "
-                + largestPalindrome
+                "The largest palindrome made from the product of two 3-digit numbers is: {0}", largestPalindrome
             );
         }
 

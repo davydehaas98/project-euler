@@ -25,7 +25,7 @@ namespace Problem2
 
             var sum = fibonacciNumbers.Where(t => t % 2 == 0).Sum();
 
-            Console.WriteLine("The sum of the even Fibonacci numbers not exceeding 4 million is: " + sum);
+            Console.WriteLine("The sum of the even Fibonacci numbers not exceeding 4 million is: {0}", sum);
         }
     }
 }
