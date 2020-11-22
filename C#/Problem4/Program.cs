@@ -1,12 +1,32 @@
 ﻿using System;
+using System.Linq;
 
 namespace Problem4
 {
-    class Program
+    internal static class Program
     {
-        static void Main()
+        private static void Main()
         {
-            Console.WriteLine("Hello World!");
+            var largestPalindrome = 0;
+
+            for (var x = 100; x <= 999; x++)
+            for (var y = 100; y <= 999; y++)
+            {
+                var number = x * y;
+
+                if (number > largestPalindrome && IsPalindrome(number.ToString()))
+                    largestPalindrome = number;
+            }
+
+            Console.WriteLine(
+                "The largest palindrome made from the product of two 3-digit numbers is: "
+                + largestPalindrome
+            );
+        }
+
+        private static bool IsPalindrome(string number)
+        {
+            return number == new string(number.Reverse().ToArray());
         }
     }
 }
