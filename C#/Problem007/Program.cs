@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.Tracing;
 
 namespace Problem007
 {
@@ -7,14 +8,14 @@ namespace Problem007
         private static void Main()
         {
             const int target = 10001;
-
+            
             var numberOfPrimes = 1;
             var number = 1;
-
+            
             while (numberOfPrimes < target)
             {
                 number += 2;
-
+                
                 if (IsPrime(number))
                     numberOfPrimes++;
             }
@@ -37,7 +38,7 @@ namespace Problem007
             {
                 if (number % counter == 0)
                     return false;
-
+                
                 counter += 2;
             }
 
