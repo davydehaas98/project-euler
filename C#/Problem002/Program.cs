@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Problem2
+namespace Problem002
 {
     internal static class Program
     {
         private static void Main()
         {
+            const int target = 4000000;
             var fibonacciNumbers = new List<int>
             {
                 1,
@@ -18,7 +19,7 @@ namespace Problem2
             {
                 var number = fibonacciNumbers[i - 2] + fibonacciNumbers[i - 1];
 
-                if (number > 4000000) break;
+                if (number > target) break;
 
                 fibonacciNumbers.Add(number);
             }

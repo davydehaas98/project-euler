@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Problem5
+namespace Problem005
 {
     internal static class Program
     {
