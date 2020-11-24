@@ -3,7 +3,7 @@
 ## Benchmark System
 - Windows 10 Pro
 - Ryzen 5 3600
-- 16 GB DDR4 3600 RAM
+- 16 GB DDR4 3600 MHz RAM
 - Python 3.8
 - Anaconda 3
 
