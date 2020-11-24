@@ -2,14 +2,13 @@ from timeit import default_timer as timer
 
 
 def problem_001():
-    target = 1000
-    sum = 0
+    target, total_sum = 1000, 0
 
     for i in range(target):
         if i % 3 == 0 or i % 5 == 0:
-            sum += i
+            total_sum += i
 
-    return sum
+    return total_sum
 
 
 if __name__ == '__main__':
