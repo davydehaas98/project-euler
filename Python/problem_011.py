@@ -2,7 +2,7 @@ from timeit import default_timer as timer
 
 
 def problem_011():
-    grid = """08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
+    grid_string = """08 02 22 97 38 15 00 40 00 75 04 05 07 78 52 12 50 77 91 08
     49 49 99 40 17 81 18 57 60 87 17 40 98 43 69 48 04 56 62 00
     81 49 31 73 55 79 14 29 93 71 40 67 53 88 30 03 49 13 36 65
     52 70 95 23 04 60 11 42 69 24 68 56 01 32 56 71 37 02 36 91
@@ -22,19 +22,30 @@ def problem_011():
     20 69 36 41 72 30 23 88 34 62 99 69 82 67 59 85 74 04 36 16
     20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54
     01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48"""
+    grid = []
 
-    grid = grid.strip().split("\n")
-    grid = [map(int, number.strip().split(" ")) for number in grid]
+    for line in grid_string.splitlines():
+        grid.append([int(number) for number in line.split()])
 
-    total_rows, total_columns, numbers_in_product = 20, 20, 4
+    total_rows, total_columns, size = len(grid), len(grid[0]), 4
     largest_product = 0
 
-    for row in range(total_rows):
-        for column in range(total_columns):
-            if column < total_columns - numbers_in_product:
-                current = grid[row, column]
+    for x in range(total_rows):
+        for y in range(total_columns - size + 1):
+            horizontal_vertical_value = \
+                max(grid[x][y] * grid[x][y + 1] * grid[x][y + 2] * grid[x][y + 3],
+                    grid[y][x] * grid[y + 1][x] * grid[y + 2][x] * grid[y + 3][x])
 
-    return result
+            diagonal_value = 0
+
+            if x <= total_rows - size:
+                diagonal_value = \
+                    max(grid[x][y] * grid[x + 1][y + 1] * grid[x + 2][y + 2] * grid[x + 3][y + 3],
+                        grid[x][y + 3] * grid[x + 1][y + 2] * grid[x + 2][y + 1] * grid[x + 3][y])
+
+            largest_product = max(largest_product, horizontal_vertical_value, diagonal_value)
+
+    return largest_product
 
 
 if __name__ == '__main__':

@@ -3,7 +3,7 @@
 ## Benchmark System
 - OS: Windows 10 Pro
 - CPU: Ryzen 5 3600
-- RAM: 16GB DDR4 3600MT/s CL18
+- RAM: 16 GB DDR4 3600MT/s CL18
 - Python 3.8
 - Anaconda 3
 
@@ -19,4 +19,6 @@ Problem | Time
 7 | 177.584 ms
 8 | 1.6145 ms
 9 | 47.0054 ms
-10 | 306.882 ms  
+10 | 306.882 ms
+11 | 0.6633 ms
+12 | 7008.2335 ms
