@@ -52,4 +52,4 @@ if __name__ == '__main__':
     start = timer()
     answer = problem_011()
     elapsed_time = (timer() - start) * 1000
-    print("Found {} in {} ms".format(answer, elapsed_time))
+    print(f"Found {answer} in {elapsed_time} ms")
