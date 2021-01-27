@@ -1,19 +1,17 @@
 from timeit import default_timer as timer
-current_chain = 0
 
 
-def calculate_chain(n):
-    global current_chain
-    current_chain += 1
+def calculate_chain(n, iteration):
+    iteration += 1
 
     if n == 1:
-        return 1
+        return iteration
     if n % 2 == 0:
         n = n / 2
     else:
         n = 3 * n + 1
 
-    return calculate_chain(n)
+    return calculate_chain(n, iteration)
 
 
 def problem_014():
@@ -22,12 +20,8 @@ def problem_014():
     longest_number = 0
 
     for current_number in range(2, max_number):
-        # Reset current_chain to 0 iterations
-        global current_chain
-        current_chain = 0
-
         # Recursion
-        calculate_chain(current_number)
+        current_chain = calculate_chain(current_number, 0)
 
         # Check if current_chain is longer than longest_chain
         if current_chain > longest_chain:
