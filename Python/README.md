@@ -1,11 +1,12 @@
 # Project Euler in Python
 
 ## Benchmark System
-- OS: Windows 10 Pro
-- CPU: Ryzen 5 3600
+- CPU: AMD Ryzen 5 3600
 - RAM: 16 GB DDR4 3200MT/s CL18
-- Python 3.8
-- Anaconda 3
+- Motherboard: MSI B450 Tomahawk MAX
+- OS: Windows 10 Pro
+- Language: Python 3.8
+- Interpreter: Anaconda 3
 
 ## Timings
 Problem | Time
@@ -17,14 +18,14 @@ Problem | Time
 5 | 5247.7 ms
 6 | 0.0132 ms
 7 | 177.584 ms
-8 | 1.6145 ms
+8 | 1.5114 ms
 9 | 47.0054 ms
 10 | 306.882 ms
 11 | 0.6633 ms
 12 | 7008.2335 ms
 13 | 0.1447 ms
-14 | 41584.0004 ms
-15 | 0.1559 ms
-16 | 0.1814 ms
-17 | 1.0252000000000039 ms
+14 | 36917.4123 ms
+15 | 0.156 ms
+16 | 0.1598 ms
+17 | 1.0252 ms
 18 | ms

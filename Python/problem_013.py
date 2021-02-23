@@ -12,9 +12,9 @@ def problem_013():
         current_sum += digits[i]
 
     # Get the first ten digits
-    result = str(current_sum)[0:10]
+    first_ten_digits = str(current_sum)[0:10]
 
-    return result
+    return first_ten_digits
 
 
 if __name__ == '__main__':

@@ -15,9 +15,9 @@ def problem_015():
                 grid[r][c] = grid[r - 1][c] + grid[r][c - 1]
 
     # Get the result from the last number in the bottom right
-    result = grid[len(grid) - 1][len(grid[0]) - 1]
+    highest_number = grid[len(grid) - 1][len(grid[0]) - 1]
 
-    return result
+    return highest_number
 
 
 if __name__ == '__main__':

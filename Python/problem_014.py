@@ -28,7 +28,6 @@ def problem_014():
             longest_chain = current_chain
             longest_number = current_number
 
-    print(longest_chain)
     result = longest_number
     return result
 

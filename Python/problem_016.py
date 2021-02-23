@@ -17,9 +17,7 @@ def problem_016():
     for digit in digits:
         total_sum = total_sum + digit
 
-    result = total_sum
-
-    return result
+    return total_sum
 
 
 if __name__ == '__main__':

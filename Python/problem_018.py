@@ -6,11 +6,12 @@ def problem_000():
         digits = [line.rstrip('\n') for line in file]
 
     for i in range(len(digits)):
-        digits[i] = digits[i].strip().split(' ')
-        digits[i] = [int(x) for x in digits[i]]
+        digits[i] = [int(x) for x in digits[i].strip().split(' ')]
 
+    print(digits)
     counter = 0
 
+    for i in xrange(len(digits), -1, -1)
 
     result = 0
     return result

@@ -2,7 +2,7 @@ from timeit import default_timer as timer
 
 
 def problem_012():
-    target_divisors = 10 #500
+    target_divisors = 500
     current_divisors = 0
     current_triangle = 1
     current = 0
@@ -13,12 +13,12 @@ def problem_012():
 
         for i in range(1, current + 1):
             square = i * i
-            print(f"i: {i}")
-            print(f"square: {square}")
-            print(f"current: {current}")
+            # print(f"i: {i}")
+            # print(f"square: {square}")
+            # print(f"current: {current}")
             if square > current:
                 square_root = i
-                print(f"square_root: {square_root}")
+                # print(f"square_root: {square_root}")
                 break
 
         current_divisors = 1
@@ -32,9 +32,7 @@ def problem_012():
 
         current_triangle += 1
 
-    result = current
-
-    return result
+    return current
 
 
 if __name__ == '__main__':
