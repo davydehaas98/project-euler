@@ -3,7 +3,9 @@ from timeit import default_timer as timer
 
 def alphabetic_score(name):
     letters = list(name)
-
+    # ord() gives the ASCII value of the character.
+    # Because all the characters in the text file are in capitals,
+    # and the capitalized characters in ASCII start at 65, subtract 64
     letters = [ord(letter) - 64 for letter in letters]
 
     return sum(letters)
