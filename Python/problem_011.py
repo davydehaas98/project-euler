@@ -8,8 +8,6 @@ def problem_011():
     for i in range(len(grid)):
         grid[i] = [int(x) for x in grid[i].strip().split(' ')]
 
-    print(grid)
-
     total_rows, total_columns, size = len(grid), len(grid[0]), 4
     largest_product = 0
 

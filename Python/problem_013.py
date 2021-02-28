@@ -6,11 +6,9 @@ def problem_013():
         digits = [int(line.rstrip('\n')) for line in file]
 
     current_sum = 0
-
     # Iterate through the digits
     for i in range(len(digits)):
         current_sum += digits[i]
-
     # Get the first ten digits
     first_ten_digits = str(current_sum)[0:10]
 

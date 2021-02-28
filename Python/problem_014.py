@@ -22,7 +22,6 @@ def problem_014():
     for current_number in range(2, max_number):
         # Recursion
         current_chain = calculate_chain(current_number, 0)
-
         # Check if current_chain is longer than longest_chain
         if current_chain > longest_chain:
             longest_chain = current_chain

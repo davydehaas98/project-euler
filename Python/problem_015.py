@@ -13,7 +13,6 @@ def problem_015():
                 grid[r][c] = 1
             else:
                 grid[r][c] = grid[r - 1][c] + grid[r][c - 1]
-
     # Get the result from the last number in the bottom right
     highest_number = grid[len(grid) - 1][len(grid[0]) - 1]
 

@@ -19,7 +19,6 @@ def sieve_of_eratosthenes(number):
             for i in range(p * p, number + 1, p):
                 prime[i] = False
         p += 1
-
     # Add up all prime numbers
     for p in range(2, number + 1):
         if prime[p]:
@@ -30,7 +29,6 @@ def sieve_of_eratosthenes(number):
 
 def problem_010():
     total_sum, target = 0, 2000000
-
     # Get all primes below target
     primes = sieve_of_eratosthenes(target - 1)
 

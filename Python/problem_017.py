@@ -51,8 +51,8 @@ def problem_017():
         if current < 100:
             total_sum += below_100_length(current)
         else:
-            thousand = int(current / 1000)
-            hundred = int(current / 100 % 10)
+            thousand = current // 1000
+            hundred = current // 100 % 10
             and_number = current % 100
 
             if current > 999:

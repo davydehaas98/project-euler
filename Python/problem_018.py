@@ -7,8 +7,7 @@ def problem_018():
 
     for i in range(len(digits)):
         digits[i] = [int(x) for x in digits[i].strip().split(' ')]
-
-    # iterate from the digits array by -1 until 0
+    # Iterate from the digits array by -1 until 0
     for x in range(len(digits) - 1, 0, -1):
         for y in range(0, x):
             # Get the highest sum of the two possible paths

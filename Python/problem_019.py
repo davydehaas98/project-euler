@@ -27,17 +27,14 @@ def problem_019():
 
     while current_date[3] < end_date[3] or current_date[2] < end_date[2] or current_date[1] < end_date[1]:
         date = current_date
-
         # Count every Sunday that fell on the first of the month
         if date[0] == 7 and date[1] == 1:
             counter += 1
-
         # Set weekday
         if date[0] > 6:
             date[0] = 1
         else:
             date[0] += 1
-
         # Check for new year
         if date[1] == 31 and date[2] == 12:
             date = [date[0], 1, 1, date[3] + 1]
@@ -62,9 +59,9 @@ def problem_019():
                 else:
                     date[1] = 1  # Set day back to 1
                     date[2] += 1  # Move to the next month
-        dates.append(date.copy())
+
         current_date = date
-    # print(dates)
+
     return counter
 
 
