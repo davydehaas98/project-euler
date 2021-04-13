@@ -2,38 +2,38 @@
 Project Euler problems solved by me, using Python.
 ## Benchmark
 ### System
-- CPU: AMD Ryzen 5 3600
-- RAM: 16 GB DDR4 3600
-- Motherboard: MSI B450 Tomahawk MAX
+- CPU: AMD Ryzen 7 5800X
+- RAM: Corsair Vengeance RGB Pro 2x8GB DDR4 [CMW16GX4M2Z3600C18]
+- Motherboard: Gigabyte X570 Aorus PRO
 - OS: Windows 10 Pro
-- Language: Python 3.8
+- Language: Python 3.9
 - Interpreter: Anaconda 3
 
 ### Results
 Problem | Time
 --- | ---
-001 | 0.1295 ms
-002 | 0.009 ms
-003 | 0.235 ms
-004 | 47.78 ms
-005 | 5247.7 ms
-006 | 0.0132 ms
-007 | 177.584 ms
-008 | 1.5114 ms
-009 | 47.0054 ms
-010 | 306.882 ms
-011 | 0.6633 ms
-012 | 7008.2335 ms
-013 | 0.1447 ms
-014 | 36917.4 ms
-015 | 0.156 ms
-016 | 0.1598 ms
-017 | 1.0252 ms
-018 | 0.1488 ms
-019 | 14.1178 ms
-020 | 21.0998 ms
-021 | 5158.11 ms
-022 | 7.6966 ms
-023 | 130655.1404 ms
+001 | 0.052 ms
+002 | 0.005 ms
+003 | 0.124 ms
+004 | 29.565 ms
+005 | 2798.401 ms
+006 | 0.009 ms
+007 | 87.841 ms
+008 | 1.382 ms
+009 | 49.037 ms
+010 | 210.381 ms
+011 | 0.897 ms
+012 | 3658.570 ms
+013 | 0.603 ms
+014 | 22174.329 ms
+015 | 0.081 ms
+016 | 0.107 ms
+017 | 0.365 ms
+018 | 0.611 ms
+019 | 6.733 ms
+020 | 0.036 ms
+021 | 2536.901 ms
+022 | 5.335 ms
+023 | 123406.573 ms
 024 | 
-067 | 2.6604 ms
+067 | 2.123 ms
