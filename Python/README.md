@@ -3,7 +3,7 @@ Project Euler problems solved by me, using Python.
 ## Benchmark
 ### System
 - CPU: AMD Ryzen 7 5800X
-- RAM: Corsair Vengeance RGB Pro 2x8GB DDR4 [CMW16GX4M2Z3600C18]
+- RAM: Corsair Vengeance RGB Pro SL 2x16GB DDR4 3200 [CMH32GX4M2Z3200C16]
 - Motherboard: Gigabyte X570 Aorus PRO
 - OS: Windows 10 Pro
 - Language: Python 3.9
