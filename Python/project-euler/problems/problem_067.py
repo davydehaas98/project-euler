@@ -1,8 +1,8 @@
-from timeit import default_timer as timer
+from utils.code_runner import execute_code
 
 
-def problem_067():
-    with open("problem_067.txt") as file:
+def problem():
+    with open("../resources/problem_067.txt") as file:
         digits = [line.rstrip('\n') for line in file]
 
     for i in range(len(digits)):
@@ -20,7 +20,4 @@ def problem_067():
 
 
 if __name__ == '__main__':
-    start = timer()
-    answer = problem_067()
-    elapsed_time = (timer() - start) * 1000
-    print(f"Found {answer} in {elapsed_time} ms")
+    execute_code(problem)

@@ -1,4 +1,4 @@
-from timeit import default_timer as timer
+from utils.code_runner import execute_code
 
 
 def next_fibonacci(a, b):
@@ -6,7 +6,7 @@ def next_fibonacci(a, b):
     return b, c
 
 
-def problem_002():
+def problem():
     total_sum, a, b = 0, 1, 2
     target = 4000000
 
@@ -19,8 +19,6 @@ def problem_002():
     return total_sum
 
 
+
 if __name__ == '__main__':
-    start = timer()
-    answer = problem_002()
-    elapsed_time = (timer() - start) * 1000
-    print(f"Found {answer} in {elapsed_time} ms")
+    execute_code(problem)

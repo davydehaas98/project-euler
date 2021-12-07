@@ -1,7 +1,7 @@
-from timeit import default_timer as timer
+from utils.code_runner import execute_code
 
 
-def problem_016():
+def problem():
     current_number = 1
     number = 2
     total_power = 1000
@@ -19,7 +19,4 @@ def problem_016():
 
 
 if __name__ == '__main__':
-    start = timer()
-    answer = problem_016()
-    elapsed_time = (timer() - start) * 1000
-    print(f"Found {answer} in {elapsed_time} ms")
+    execute_code(problem)

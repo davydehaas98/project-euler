@@ -1,4 +1,4 @@
-from timeit import default_timer as timer
+from utils.code_runner import execute_code
 
 
 zero_to_nineteen = [
@@ -43,7 +43,7 @@ def below_100_length(number):
     return tenths[int(number / 10 - 2) | 0] + zero_to_nineteen[number % 10]
 
 
-def problem_017():
+def problem():
     target = 1000
     total_sum = 0
 
@@ -68,7 +68,4 @@ def problem_017():
 
 
 if __name__ == '__main__':
-    start = timer()
-    answer = problem_017()
-    elapsed_time = (timer() - start) * 1000
-    print(f"Found {answer} in {elapsed_time} ms")
+    execute_code(problem)

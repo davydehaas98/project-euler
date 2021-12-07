@@ -1,4 +1,4 @@
-from timeit import default_timer as timer
+from utils.code_runner import execute_code
 
 
 def alphabetic_score(name):
@@ -11,10 +11,10 @@ def alphabetic_score(name):
     return sum(letters)
 
 
-def problem_022():
+def problem():
     total_score = 0
 
-    with open("problem_022.txt") as file:
+    with open("../resources/problem_022.txt") as file:
         names = file.read().split(',')
     # Remove trailing " symbols
     names = [name.strip("\"") for name in names]
@@ -28,7 +28,4 @@ def problem_022():
 
 
 if __name__ == '__main__':
-    start = timer()
-    answer = problem_022()
-    elapsed_time = (timer() - start) * 1000
-    print(f"Found {answer} in {elapsed_time} ms")
+    execute_code(problem)

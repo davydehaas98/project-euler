@@ -1,4 +1,4 @@
-from timeit import default_timer as timer
+from utils.code_runner import execute_code
 
 
 def calculate_chain(n, iteration):
@@ -14,7 +14,7 @@ def calculate_chain(n, iteration):
     return calculate_chain(n, iteration)
 
 
-def problem_014():
+def problem():
     max_number = 1000000
     longest_chain = 0
     longest_number = 0
@@ -32,7 +32,4 @@ def problem_014():
 
 
 if __name__ == '__main__':
-    start = timer()
-    answer = problem_014()
-    elapsed_time = (timer() - start) * 1000
-    print(f"Found {answer} in {elapsed_time} ms")
+    execute_code(problem)

@@ -1,4 +1,4 @@
-from timeit import default_timer as timer
+from utils.code_runner import execute_code
 
 
 def swap(a, b, array):
@@ -11,7 +11,7 @@ def swap(a, b, array):
     return array
 
 
-def problem_024():
+def problem():
     digits = [0, 1, 2, 3]
     permutations = [digits.copy()]
 
@@ -28,7 +28,4 @@ def problem_024():
 
 
 if __name__ == '__main__':
-    start = timer()
-    answer = problem_024()
-    elapsed_time = (timer() - start) * 1000
-    print(f"Found {answer} in {elapsed_time} ms")
+    execute_code(problem)

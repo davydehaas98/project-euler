@@ -1,4 +1,4 @@
-from timeit import default_timer as timer
+from utils.code_runner import execute_code
 
 
 def d(n):
@@ -11,7 +11,7 @@ def d(n):
     return total_sum
 
 
-def problem_021():
+def problem():
     max_range = 10000
     total_sum = 0
 
@@ -25,7 +25,4 @@ def problem_021():
 
 
 if __name__ == '__main__':
-    start = timer()
-    answer = problem_021()
-    elapsed_time = (timer() - start) * 1000
-    print(f"Found {answer} in {elapsed_time} ms")
+    execute_code(problem)

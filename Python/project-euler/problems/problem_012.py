@@ -1,7 +1,7 @@
-from timeit import default_timer as timer
+from utils.code_runner import execute_code
 
 
-def problem_012():
+def problem():
     target_divisors = 500
     current_divisors = 0
     current_triangle = 1
@@ -36,7 +36,4 @@ def problem_012():
 
 
 if __name__ == '__main__':
-    start = timer()
-    answer = problem_012()
-    elapsed_time = (timer() - start) * 1000
-    print(f"Found {answer} in {elapsed_time} ms")
+    execute_code(problem)

@@ -1,4 +1,4 @@
-from timeit import default_timer as timer
+from utils.code_runner import execute_code
 
 
 def is_prime(number):
@@ -20,7 +20,7 @@ def is_prime(number):
     return True
 
 
-def problem_007():
+def problem():
     target = 10001
 
     number_of_primes, number = 1, 1
@@ -34,7 +34,4 @@ def problem_007():
 
 
 if __name__ == '__main__':
-    start = timer()
-    answer = problem_007()
-    elapsed_time = (timer() - start) * 1000
-    print(f"Found {answer} in {elapsed_time} ms")
+    execute_code(problem)

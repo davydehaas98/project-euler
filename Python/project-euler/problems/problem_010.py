@@ -1,4 +1,4 @@
-from timeit import default_timer as timer
+from utils.code_runner import execute_code
 
 
 def sieve_of_eratosthenes(number):
@@ -27,7 +27,7 @@ def sieve_of_eratosthenes(number):
     return primes
 
 
-def problem_010():
+def problem():
     total_sum, target = 0, 2000000
     # Get all primes below target
     primes = sieve_of_eratosthenes(target - 1)
@@ -39,7 +39,4 @@ def problem_010():
 
 
 if __name__ == '__main__':
-    start = timer()
-    answer = problem_010()
-    elapsed_time = (timer() - start) * 1000
-    print(f"Found {answer} in {elapsed_time} ms")
+    execute_code(problem)

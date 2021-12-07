@@ -1,7 +1,7 @@
-from timeit import default_timer as timer
+from utils.code_runner import execute_code
 
 
-def problem_015():
+def problem():
     rows = 20
     columns = 20
     grid = [[0 for c in range(columns + 1)] for r in range(rows + 1)]
@@ -20,7 +20,4 @@ def problem_015():
 
 
 if __name__ == '__main__':
-    start = timer()
-    answer = problem_015()
-    elapsed_time = (timer() - start) * 1000
-    print(f"Found {answer} in {elapsed_time} ms")
+    execute_code(problem)

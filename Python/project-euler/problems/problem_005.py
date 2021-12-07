@@ -1,4 +1,4 @@
-from timeit import default_timer as timer
+from utils.code_runner import execute_code
 
 
 def is_divisible(number):
@@ -9,7 +9,7 @@ def is_divisible(number):
     return True
 
 
-def problem_005():
+def problem():
     current = 20
 
     while not is_divisible(current):
@@ -19,7 +19,4 @@ def problem_005():
 
 
 if __name__ == '__main__':
-    start = timer()
-    answer = problem_005()
-    elapsed_time = (timer() - start) * 1000
-    print(f"Found {answer} in {elapsed_time} ms")
+    execute_code(problem)

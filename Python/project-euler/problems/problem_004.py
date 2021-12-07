@@ -1,7 +1,7 @@
-from timeit import default_timer as timer
+from utils.code_runner import execute_code
 
 
-def problem_004():
+def problem():
     largest_palindrome = 0
 
     for i in range(999, 100, -1):
@@ -16,7 +16,4 @@ def problem_004():
 
 
 if __name__ == '__main__':
-    start = timer()
-    answer = problem_004()
-    elapsed_time = (timer() - start) * 1000
-    print(f"Found {answer} in {elapsed_time} ms")
+    execute_code(problem)

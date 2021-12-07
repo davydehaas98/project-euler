@@ -1,7 +1,7 @@
-from timeit import default_timer as timer
+from utils.code_runner import execute_code
 
 
-def problem_019():
+def problem():
     days_in_month = [
         0,   # Start index at 1
         31,  # January
@@ -22,7 +22,6 @@ def problem_019():
     start_date = [2, 1, 1, 1901]
     end_date = [7, 31, 12, 2000]
     counter = 0
-    dates = []
     current_date = start_date
 
     while current_date[3] < end_date[3] or current_date[2] < end_date[2] or current_date[1] < end_date[1]:
@@ -66,7 +65,4 @@ def problem_019():
 
 
 if __name__ == '__main__':
-    start = timer()
-    answer = problem_019()
-    elapsed_time = (timer() - start) * 1000
-    print(f"Found {answer} in {elapsed_time} ms")
+    execute_code(problem)

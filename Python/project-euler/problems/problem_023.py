@@ -1,4 +1,4 @@
-from timeit import default_timer as timer
+from utils.code_runner import execute_code
 import math
 
 
@@ -45,7 +45,7 @@ def is_sum_of_two_abundant_numbers(n, abundant_numbers):
     return False
 
 
-def problem_023():
+def problem():
     # All abundant number greater than the upper limit
     # can be written as the sum of two abundant numbers.
     upper_limit = 28123
@@ -64,7 +64,4 @@ def problem_023():
 
 
 if __name__ == '__main__':
-    start = timer()
-    answer = problem_023()
-    elapsed_time = (timer() - start) * 1000
-    print(f"Found {answer} in {elapsed_time} ms")
+    execute_code(problem)
