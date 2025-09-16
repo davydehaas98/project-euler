@@ -1,5 +1,8 @@
 {
   "extends": [
-    "config:base"
+    "github>davydehaas98/renovate-config"
+  ],
+  "baseBranchPatterns": [
+    "main"
   ]
 }
