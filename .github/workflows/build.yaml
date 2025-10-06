@@ -1,0 +1,32 @@
+name: Build
+on:
+  push:
+    branches:
+      - main
+      - renovate/**
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5.0.0
+
+      - name: Set up Java
+        uses: actions/setup-java@v5.0.0
+        with:
+          distribution: 'liberica'
+          java-version: 25
+          java-package: 'jdk'
+          cache: maven
+
+      - name: Run mvn clean verify
+        run: mvn clean verify
+
+      - name: Publish Surefire test report
+        uses: dorny/test-reporter@v2.1.1
+        if: always()
+        with:
+          name: Surefire Tests
+          path: target/surefire-reports/*.xml
+          reporter: java-junit
+          fail-on-error: true
