@@ -1,4 +1,4 @@
-name: Build
+name: Build Java
 on:
   push:
     branches:

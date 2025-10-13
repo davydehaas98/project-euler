@@ -4,7 +4,7 @@ import static nl.davydehaas.projecteuler.util.SolutionTimer.timeSolution;
 
 class Problem001 {
 
-    public static void main(String[] args) {
+    void main() {
         timeSolution(Problem001::solve);
     }
 
