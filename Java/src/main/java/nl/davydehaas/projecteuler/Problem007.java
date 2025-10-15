@@ -9,17 +9,38 @@ public class Problem007 {
     }
 
     static Number solve() {
-        int square = 0;
-        int number = 0;
+        int target = 10001;
+        int numberOfPrimes = 1;
+        int number = 1;
 
-        for (int i = 0; i < 101; i++) {
-            square += i;
-            number += i * i;
+        while (numberOfPrimes < target) {
+            number += 2;
+            if (isPrime(number)) {
+                numberOfPrimes++;
+            }
+        }
+        // The 10001th prime number is
+        return number;
+    }
+
+    static boolean isPrime(int number) {
+        if (number < 2) {
+            return false;
+        }
+        if (number == 2) {
+            return true;
+        }
+        if (number % 2 == 0) {
+            return false;
         }
 
-        // The difference between the sum of
-        // the squares of the first one hundred natural numbers
-        // and the square of the sum
-        return square * square - number;
+        int counter = 3;
+        while (counter * counter <= number) {
+            if (number % counter == 0) {
+                return false;
+            }
+            counter += 2;
+        }
+        return true;
     }
 }
