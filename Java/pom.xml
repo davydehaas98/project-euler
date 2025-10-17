@@ -18,7 +18,7 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <maven.compiler.release>${java.version}</maven.compiler.release>
 
-        <checkstyle.version>11.0.1</checkstyle.version>
+        <checkstyle.version>12.0.1</checkstyle.version>
         <jacoco.version>0.8.13</jacoco.version>
         <junit.version>6.0.0</junit.version>
         <maven-checkstyle.version>3.6.0</maven-checkstyle.version>
