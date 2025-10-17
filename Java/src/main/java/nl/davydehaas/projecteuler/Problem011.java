@@ -50,14 +50,20 @@ public class Problem011 {
             for (int y = 0; y < totalColumns - size + 1; y++) {
                 int horizontalValue = grid[x][y] * grid[x][y + 1] * grid[x][y + 2] * grid[x][y + 3];
                 int verticalValue = grid[y][x] * grid[y + 1][x] * grid[y + 2][x] * grid[y + 3][x];
-                int diagonalValue = 0;
 
+                int diagonalValue = 0;
+                int reverseDiagonalValue = 0;
                 if (x <= totalRows - size) {
-                    diagonalValue = 0;
+                    diagonalValue = grid[x][y] * grid[x + 1][y + 1] * grid[x + 2][y + 2] * grid[x + 3][y + 3];
+                    reverseDiagonalValue = grid[x][y + 3] * grid[x + 1][y + 2] * grid[x + 2][y + 1] * grid[x + 3][y];
                 }
+
                 largestProduct = Math.max(
-                        Math.max(largestProduct, horizontalValue),
-                        Math.max(verticalValue, diagonalValue)
+                        largestProduct,
+                        Math.max(
+                                Math.max(horizontalValue, verticalValue),
+                                Math.max(diagonalValue, reverseDiagonalValue)
+                        )
                 );
             }
         }
