@@ -20,7 +20,7 @@ def problem():
         # Is amicable
         if a != b and d(b) == a:
             total_sum += a
-    # Divide the total sum by 2 because every number was added twice.
+
     return total_sum
 
 

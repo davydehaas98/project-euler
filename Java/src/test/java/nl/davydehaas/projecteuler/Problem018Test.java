@@ -8,6 +8,6 @@ class Problem018Test {
     @Test
     void problem018() {
         Object result = Problem018.solve();
-        Assertions.assertEquals(21124, result);
+        Assertions.assertEquals(1074, result);
     }
 }
