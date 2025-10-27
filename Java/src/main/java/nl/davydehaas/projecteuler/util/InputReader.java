@@ -22,7 +22,7 @@ public final class InputReader {
     public static List<String> readFile(int number, boolean isTest) {
         String pathPrefix = number < 10 ? "/problem_00%d" : number < 100 ? "/problem_0%d" : "/problem_%d";
         String pathSuffix = isTest ? "-test.txt" : ".txt";
-        String fileName = String.format("Java/src/main/resources" + pathPrefix + pathSuffix, number);
+        String fileName = String.format("src/main/resources" + pathPrefix + pathSuffix, number);
 
         try (BufferedReader reader = new BufferedReader(new FileReader(fileName), 8192)) {
             return reader.lines().toList();
