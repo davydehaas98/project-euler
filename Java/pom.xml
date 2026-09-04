@@ -23,7 +23,7 @@
         <junit.version>6.0.0</junit.version>
         <maven-checkstyle.version>3.6.0</maven-checkstyle.version>
         <sonar.version>5.2.0.4988</sonar.version>
-        <surefire.version>3.5.4</surefire.version>
+        <surefire.version>3.6.0</surefire.version>
     </properties>
 
     <dependencies>
