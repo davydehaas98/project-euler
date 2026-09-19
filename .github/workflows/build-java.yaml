@@ -6,7 +6,7 @@ on:
       - renovate/**
 jobs:
   build:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     defaults:
       run:
         working-directory: ./Java
